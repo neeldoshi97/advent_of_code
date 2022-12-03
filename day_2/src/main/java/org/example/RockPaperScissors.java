@@ -14,7 +14,7 @@ import static org.example.model.UserResultEnum.*;
 
 public class RockPaperScissors {
 
-    static Map<String, RockPaperScissorEnum> rockPaperScissorsResultMap = Map.of(
+    static Map<String, RockPaperScissorEnum> rockPaperScissorsInputMap = Map.of(
             "A", RockPaperScissorEnum.ROCK,
             "B", RockPaperScissorEnum.PAPER,
             "C", RockPaperScissorEnum.SCISSORS,
@@ -67,7 +67,7 @@ public class RockPaperScissors {
     }
 
     public static RockPaperScissorEnum retrieveSelectionFromInput(String input) {
-        return rockPaperScissorsResultMap.get(input);
+        return rockPaperScissorsInputMap.get(input);
     }
 
     private static File getFileFromResource(String fileName) throws URISyntaxException {
