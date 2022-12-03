@@ -56,7 +56,7 @@ public class RockPaperScissors {
     }
 
     public static UserResultEnum checkResultOutcome(RockPaperScissorEnum opponentInput, RockPaperScissorEnum userInput) {
-        if(opponentInput.equals(userInput)){
+        if (opponentInput.equals(userInput)) {
             return DRAW;
         }
         return userInput.getBeats().equals(opponentInput.getName()) ? WIN : LOSE;
