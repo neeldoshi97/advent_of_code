@@ -1,2 +1,12 @@
 /day_1/build/
 /day_1/.gradle/
+/day_2/.gradle/
+/day_2/build/
+/.idea/advent_of_code.iml
+/.idea/compiler.xml
+/.idea/gradle.xml
+/.idea/jarRepositories.xml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/uiDesigner.xml
+/.idea/vcs.xml
