@@ -2,11 +2,9 @@ package org.example.model;
 
 public class Elf {
 
-    private final Integer id;
     private final Integer totalCalories;
 
-    public Elf(Integer id, Integer totalCalories) {
-        this.id = id;
+    public Elf(Integer totalCalories) {
         this.totalCalories = totalCalories;
     }
 

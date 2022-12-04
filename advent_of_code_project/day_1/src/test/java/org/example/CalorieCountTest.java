@@ -17,8 +17,8 @@ class CalorieCountTest {
 
     @Test
     void getElfWithMostCalories() {
-        Elf elf = new Elf(1, 1);
-        Elf elf2 = new Elf(2, 3);
+        Elf elf = new Elf(1);
+        Elf elf2 = new Elf(3);
         Elf result = CalorieCount.getElfWithMostCalories(List.of(elf, elf2));
         assertEquals(elf2, result);
 
