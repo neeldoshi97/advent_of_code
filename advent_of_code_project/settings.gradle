@@ -1,0 +1,3 @@
+rootProject.name = 'advent_of_code_project'
+include 'util','day_1','day_2'
+

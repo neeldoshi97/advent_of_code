@@ -5,12 +5,7 @@ import org.example.model.Elf;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.net.URISyntaxException;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class CalorieCount {
     public static void main(String[] args) {
@@ -19,9 +14,7 @@ public class CalorieCount {
         List<Elf> elves = new ArrayList<>();
 
         try {
-            File file = CalorieCount.getFileFromResource("input.txt");
-
-            int id = 1;
+            File file = FileReaderUtil.getFileFromResource("input.txt", CalorieCount.class);
 
             Scanner myReader = new Scanner(file);
             while (myReader.hasNextLine()) {
@@ -29,8 +22,7 @@ public class CalorieCount {
                 if (!data.isEmpty()) {
                     calorieList.add(Integer.parseInt(data));
                 } else {
-                    elves.add(new Elf(id, calculateTotalCaloriesForElf(calorieList)));
-                    id++;
+                    elves.add(new Elf(calculateTotalCaloriesForElf(calorieList)));
                     calorieList.clear();
                 }
             }
@@ -56,15 +48,15 @@ public class CalorieCount {
         return Collections.max(elves, Comparator.comparing(Elf::totalCalories));
     }
 
-    private static File getFileFromResource(String fileName) throws URISyntaxException {
-
-        ClassLoader classLoader = CalorieCount.class.getClassLoader();
-        URL resource = classLoader.getResource(fileName);
-        if (resource == null) {
-            throw new IllegalArgumentException("file not found! " + fileName);
-        } else {
-            return new File(resource.toURI());
-        }
-
-    }
+//    private static File getFileFromResource(String fileName) throws URISyntaxException {
+//
+//        ClassLoader classLoader = CalorieCount.class.getClassLoader();
+//        URL resource = classLoader.getResource(fileName);
+//        if (resource == null) {
+//            throw new IllegalArgumentException("file not found! " + fileName);
+//        } else {
+//            return new File(resource.toURI());
+//        }
+//
+//    }
 }

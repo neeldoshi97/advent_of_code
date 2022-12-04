@@ -6,7 +6,6 @@ import org.example.model.UserResultEnum;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.net.URISyntaxException;
-import java.net.URL;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -28,7 +27,7 @@ public class RockPaperScissors {
         int totalPoints = 0;
 
         try {
-            File file = RockPaperScissors.getFileFromResource("input.txt");
+            File file = FileReaderUtil.getFileFromResource("input.txt", RockPaperScissors.class);
 
             Scanner myReader = new Scanner(file);
             while (myReader.hasNextLine()) {
@@ -68,17 +67,5 @@ public class RockPaperScissors {
 
     public static RockPaperScissorEnum retrieveSelectionFromInput(String input) {
         return rockPaperScissorsInputMap.get(input);
-    }
-
-    private static File getFileFromResource(String fileName) throws URISyntaxException {
-
-        ClassLoader classLoader = RockPaperScissors.class.getClassLoader();
-        URL resource = classLoader.getResource(fileName);
-        if (resource == null) {
-            throw new IllegalArgumentException("file not found! " + fileName);
-        } else {
-            return new File(resource.toURI());
-        }
-
     }
 }

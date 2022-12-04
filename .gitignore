@@ -1,7 +1,7 @@
-/day_1/build/
-/day_1/.gradle/
-/day_2/.gradle/
-/day_2/build/
+/advent_of_code_project/day_1/build/
+/advent_of_code_project/day_1/.gradle/
+/advent_of_code_project/day_2/.gradle/
+/advent_of_code_project/day_2/build/
 /.idea/advent_of_code.iml
 /.idea/compiler.xml
 /.idea/gradle.xml
@@ -10,3 +10,4 @@
 /.idea/modules.xml
 /.idea/uiDesigner.xml
 /.idea/vcs.xml
+/advent_of_code_project/.gradle/
