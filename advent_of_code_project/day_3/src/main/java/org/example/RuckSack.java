@@ -4,8 +4,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.net.URISyntaxException;
 import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class RuckSack {
 
@@ -17,7 +15,7 @@ public class RuckSack {
         int totalPriority = 0;
 
         try {
-            File file = FileReaderUtil.getFileFromResource("input.txt", RuckSack.class);
+            File file = FileReaderUtil.getFileFromResource(RuckSack.class);
 
             Scanner myReader = new Scanner(file);
             while (myReader.hasNextLine()) {

@@ -27,7 +27,7 @@ public class RockPaperScissors {
         int totalPoints = 0;
 
         try {
-            File file = FileReaderUtil.getFileFromResource("input.txt", RockPaperScissors.class);
+            File file = FileReaderUtil.getFileFromResource(RockPaperScissors.class);
 
             Scanner myReader = new Scanner(file);
             while (myReader.hasNextLine()) {

@@ -6,8 +6,8 @@ import java.net.URL;
 
 public class FileReaderUtil {
 
-    public static <T> File getFileFromResource(String fileName, Class<T> className) throws URISyntaxException {
-
+    public static <T> File getFileFromResource(Class<T> className) throws URISyntaxException {
+        String fileName = "input.txt";
         ClassLoader classLoader = className.getClassLoader();
         URL resource = classLoader.getResource(fileName);
         if (resource == null) {

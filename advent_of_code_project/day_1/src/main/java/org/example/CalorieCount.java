@@ -14,7 +14,7 @@ public class CalorieCount {
         List<Elf> elves = new ArrayList<>();
 
         try {
-            File file = FileReaderUtil.getFileFromResource("input.txt", CalorieCount.class);
+            File file = FileReaderUtil.getFileFromResource(CalorieCount.class);
 
             Scanner myReader = new Scanner(file);
             while (myReader.hasNextLine()) {
