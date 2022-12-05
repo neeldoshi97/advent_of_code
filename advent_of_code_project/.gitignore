@@ -13,3 +13,5 @@
 /advent_of_code_project/.gradle/
 /advent_of_code_project/day_3/build/
 /day_5/out/
+/day_5/build/
+/util/build/
